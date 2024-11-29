@@ -14,6 +14,8 @@
 
 #include <mpi.h>
 #include <stdio.h>
+#include <iostream>
+using namespace std;
 
 void check_circuit(int, int);
 
@@ -22,6 +24,11 @@ int main(int argc, char *argv[])
     int i;  /* 循环下标 */
     int id; /* Process rank 进程ID号*/
     int p;  /* Number of processes 进程总数*/
+
+    // for(int i = 0; i < argc; i++){
+    //     cout << argv[i] << " ";
+    // }
+    // cout << endl;
 
     MPI_Init(&argc, &argv);
     MPI_Comm_rank(MPI_COMM_WORLD, &id);
